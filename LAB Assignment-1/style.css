@@ -170,8 +170,33 @@ form button:hover {
 /* DOM Section */
 .dom {
     grid-column: span 2;
-    margin-top: 20px;
+    background: #efefef;
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     font-weight: 600;
+}
+
+/* Title */
+.dom::before {
+    content: "DOM Manipulation Demo";
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #5b67d8;
+    margin-bottom: 15px;
+}
+
+/* Inner Box */
+.dom .key {
+    background: #f7f7f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .key {
@@ -179,7 +204,10 @@ form button:hover {
     font-size: 20px;
     color: #5b67d8;
 }
-
+.events {
+    color: #67c1c9;
+    text-align: center;
+}
 /* Responsive */
 @media (max-width: 900px) {
     .container {
