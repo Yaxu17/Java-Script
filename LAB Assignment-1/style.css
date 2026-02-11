@@ -1,8 +1,192 @@
+.card{
+    background-color: aqua;
+    width: 150px;
+    position: relative;
+}
+
+.deleteCard{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6dd5c3, #4ca1af);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Container */
 .container {
+    width: 1100px;
     display: grid;
-    width: 80%;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+/* Cards (Form + Events + DOM) */
+.eventForm,
+.events,
+.dom {
+    background: #f3f3f3;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Form Styling */
+form label {
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+form textarea {
+    height: 70px;
+    resize: none;
+}
+
+/* Add Button */
+form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: #67c1c9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #56aeb6;
+}
+
+/* Event Section Buttons */
+#clearAll,
+#addSample {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 10px;
+    background: #67c1c9;
+    transition: 0.3s;
+}
+
+#clearAll:hover,
+#addSample:hover {
+    background: #56aeb6;
+}
+
+/* Cards Container */
+.cards {
+    margin-top: 20px;
+}
+
+/* Event Card */
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.card h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+/* Category Button */
+.card .category {
+    background: #5b67d8;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 6px 0;
+}
+
+/* Delete Button */
+.deleteCard {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6b6b;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* DOM Section */
+.dom {
+    grid-column: span 2;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.key {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #5b67d8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .dom {
+        grid-column: span 1;
+    }
 }
